@@ -10,8 +10,10 @@ Vagrant.configure("2") do |config|
   #
   #   # Customize the amount of memory on the VM:
     h.vmname = "Ubuntu2004"
-    h.memory = 8192
+    h.memory = 6144
+    h.maxmemory = 8192
     h.cpus = 8
+    h.linked_clone = true
     h.vm_integration_services = {
       guest_service_interface: true,
       CustomVMSRV: true
